@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>ランク</th>
+    <th>ユーザー名</th>
+    <th>ショップ名</th>
+    <th>いいね数</th>
+  </tr>
+  <% @post_image_favorite_ranks.each.with_index(1) do |post, i| %>
+  <tr>
+    <td>第<%= i %>位</td>
+    <td><%= post.user.name %></td>
+    <td><%= post.shop_name %></td>
+    <td><%= post.favorites.count %></td>
+  </tr>
+  <% end %>
+</table>
